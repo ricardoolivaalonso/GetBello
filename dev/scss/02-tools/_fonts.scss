@@ -1,0 +1,53 @@
+@font-face {
+	font-family: 'Amerigo', sans-serif;
+	src: url('../fonts/Amerigo-BT-Bold.ttf') format("truetype");
+	font-weight: 400;
+}
+// -------------------------
+@mixin f-subtitle(){
+	font-family: 'WorkSans', sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: $orange;
+
+	@media(max-width: $mq-2){
+		text-align: center;
+		width: 100%;
+	}
+}
+@mixin f-title(){
+	font-family: 'David Libre', serif;
+	font-size: 46px;
+	font-weight: 700;
+	line-height: 1;
+	color: $black;
+
+	@media(max-width: $mq-2){
+		font-size: 38px;
+		text-align: center;
+	}
+}
+@mixin f-description(){
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.6;
+	color: $gray;
+
+	@media(max-width: $mq-2){ text-align: center; }
+	@media(max-width: $mq-4){ font-size: 16px; }
+}
+@mixin f16-wm(){
+	font-family: 'Work Sans', sans-serif;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 1.2;
+	letter-spacing: .5px;
+}
+@mixin f14-ws(){
+	font-family: 'Work Sans', sans-serif;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1.2;
+}

@@ -1,0 +1,90 @@
+.mc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+.header{
+    @include flex(flex, center, center, row, nowrap);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: $white;
+}
+.hero{
+    @include flex(flex, center, center, column, wrap);
+    width: 100%;
+    position: relative;
+    margin-top: 94px;
+    padding: var(--gap-v) var(--gap-h);
+
+    @media(min-width: $mq-2){
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        max-width: $max-width;
+        max-height: 700px;
+        height: 60vw;
+        margin-top: 113px;
+        padding: var(--gap-sh);
+    }
+}
+.price{
+    @include flex(flex, center, center, row, nowrap);
+    width: 100%;
+    padding: var(--gap-sv) var(--gap-sh);
+    background-color: $bg2;
+}
+.help{
+    @include flex(flex, center, center, row, nowrap);
+    width: 100%;
+    padding: calc(var(--gap-sv) * 2) var(--gap-sh);
+
+    @media(max-width: $mq-2){ padding: var(--gap-sv) var(--gap-sh) calc(var(--gap-sv) * 2.5); }
+}
+.hands{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 100px var(--gap-sh) var(--gap-sv);
+    position: relative;
+    background-color: $bg;
+}
+.works{
+    @include flex(flex, center, center, row, nowrap);
+    width: 100%;
+    padding: var(--gap-sv) var(--gap-sh);
+    background-color: $works;
+}
+.learning{
+    @include flex(flex, center, center, row, nowrap);
+    width: 100%;
+    padding: 160px 15px;
+    background-color: $bg2;
+
+    @media(max-width: $mq-2){ padding: 60px 15px 160px; }
+}
+.cards{
+    @include flex(flex, center, center, row, nowrap);
+    width: 100%;
+    padding: var(--gap-sv) var(--gap-sh) calc(var(--gap-sv) * 2.5);
+
+    @media(max-width: $mq-2){ padding: calc(var(--gap-sh) * 2) var(--gap-sh); }
+}
+.started{
+    display: flex;
+    justify-content: center;
+    background-color: $card-cyan;
+    width: 100%;
+    padding: 100px 0;
+    position: relative;
+    padding: var(--gap-sv) var(--gap-sh);
+}
+.footer{
+    @include flex(flex, center, center, column, wrap);
+    width: 100%;
+    max-width: $max-width;
+    padding: var(--gap-sv) var(--gap-sh) var(--gap-sh);
+}

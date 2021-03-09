@@ -1,0 +1,60 @@
+.hero{
+    &__info{
+        @media(min-width: $mq-2){
+            @include flex(flex, center, flex-start, column, wrap);
+            width: 100%;
+            position: relative;
+            margin-left: 100px;
+            z-index: 1;
+        }
+        @media(min-width: $mq-3){ align-content: center; }
+        @media(min-width: $mq-4){ max-width: 450px; }
+    }
+        &__subtitle{
+            @include f-subtitle();
+            margin-bottom: 33px;
+            font-size: 18px;
+
+            @media(max-width: $mq-2){
+                display: flex;
+                justify-content: center;
+            }
+            @media(max-width: $mq-4){ font-size: 16px; }
+        }
+        &__title{
+            @include f-title();
+            font-size: 68px;
+            text-transform: capitalize;
+
+            @media(max-width: $mq-2){ font-size: 68px; text-align: center; }
+            @media(max-width: $mq-4){ font-size: 42px; }
+        }
+        &__description{
+            @include f-description();
+            margin: 16px 0 44px;
+            font-size: 20px;
+
+            @media(max-width: $mq-2){
+                margin: 14px 0 28px;
+                text-align: center;
+            }
+        }
+        &__button{
+            @media(max-width: $mq-2){ margin: 0 auto;}
+        }
+
+    &__video{
+        width: 100%;
+
+        @media(min-width: $mq-1){ right: 100px; }
+        @media(min-width: $mq-2){
+            width: calc(100% - 700px);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-60%);
+            right: 50px;
+        }
+        @media(min-width: $mq-4){ width: 80%;}
+        @media(min-width: $mq-3){ width: 70%; }
+    }
+}

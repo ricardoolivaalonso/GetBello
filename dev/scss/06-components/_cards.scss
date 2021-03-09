@@ -1,0 +1,74 @@
+.card{
+    &__swiper{
+        max-width: $max-container;
+        width: 100%;
+        overflow: hidden;
+
+        @media(max-width: $mq-2){
+            max-width: 100%;
+            margin-left: 0;
+        }
+    }
+    &__slider{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+    }
+        &__item{
+            width: calc(100 - 40px);
+            max-width: 272px;
+            height: 320px;
+            padding: 40px 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @media(max-width: $mq-2){ max-width: 100%; }
+            @media(max-width: $mq-4){ height: 280px; }
+
+            &--cyan{
+                background-color: $card-cyan;
+                .card__link,
+                .card__title{
+                    color: darken($card-cyan, 25);
+                }
+            }
+            &--orange{
+                background-color: $card-orange;
+                .card__link,
+                .card__title{
+                    color: darken($card-orange, 25);
+                }
+            }
+            &--red{
+                background-color: $card-red;
+                .card__link,
+                .card__title{
+                    color: darken($card-red, 25);
+                }
+            }
+            &--blue{
+                background-color: $card-blue;
+                .card__link,
+                .card__title{
+                    color: darken($card-blue, 35);
+                }
+            }
+        }
+        &__title{
+            font-family: 'David Libre', serif;
+            font-size: 36px;
+            text-align: left;
+        }
+        &__link,
+        &__description{
+            display: flex;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            color: $gray;
+
+            svg{ margin-left: 10px; }
+        }
+
+}

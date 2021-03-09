@@ -1,0 +1,66 @@
+.learning{
+    &__container{ }
+    &__info{
+        @include flex(flex, center, flex-start, column, wrap);
+        position: relative;
+        width: 100%;
+        max-width: 470px;
+
+        @media(max-width: $mq-2){
+            align-items: center;
+            margin-bottom: 40px;
+            max-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            max-width:500px;
+        }
+        @media(max-width: $mq-5){ max-width: 100%; }
+    }
+        &__subtitle{
+            @include f-subtitle();
+            margin-bottom: 33px;
+        }
+        &__title{ @include f-title(); }
+        &__description{
+            @include f-description();
+            margin: 29px 0 20px;
+        }
+        &__button{
+            display: flex;
+            align-items: center;
+
+            @include f16-wm();
+            color: $green;
+            font-size: 18px;
+            text-transform: capitalize;
+
+            svg{ margin-left: 10px; }
+        }
+
+        &__images{
+            width: 100%;
+            max-width: 470px;
+            position: relative;
+
+            @media(max-width: $mq-2){
+                margin-left: 0;
+                margin-right: 0;
+            }
+            @media(max-width: $mq-5){ max-width: 100%; }
+        }
+            &__image{
+                position: absolute;
+                left: -50px;
+                top: -50px;
+                max-width: 100%;
+            }
+            &__picture{
+                position: relative;
+                z-index: 1;
+                box-shadow: $box-shadow-2;
+            }
+        &__bubble{
+            right: -60px;
+            @media(max-width: $mq-4){ right: -2px; }
+        }
+}

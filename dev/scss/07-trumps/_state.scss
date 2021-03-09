@@ -1,0 +1,9 @@
+.is-header-visible{
+    box-shadow: $box-shadow;
+    border-bottom: $border-color;
+    transition: $transition;
+}
+.is-menu-visible{
+    transform: translateX(0);
+    transition: 250ms linear;
+}

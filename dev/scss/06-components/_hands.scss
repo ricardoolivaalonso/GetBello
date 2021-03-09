@@ -1,0 +1,107 @@
+.hands{
+    &__container{
+        @include flex(flex, center, center, column, wrap);
+        @media(max-width: $mq-1){ padding-left: 0; }
+    }
+        &__picture{
+            &-top{
+                position: absolute;
+                top: 0;
+                transform: translateY(-35%);
+            }
+            &-bottom{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                transform: translateY(35%);
+            }
+        }
+        &__info{
+            @include flex(flex, center, center, column, wrap);
+            width: 100%;
+            margin-bottom: 45px;
+        }
+            &__subtitle{
+                @include f-subtitle();
+                margin-bottom: 33px;
+            }
+            &__title{ @include f-title(); }
+            &__description{
+                @include f-description();
+                margin: 29px 0 20px;
+                text-align: center;
+
+                @media(max-width: $mq-4){ max-width: 90%; }
+            }
+            &__button{
+                @include f16-wm();
+                color: $green;
+                font-size: 18px;
+                text-transform: capitalize;
+            }
+        &-cards{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 55px;
+
+            @media(max-width: $mq-2){
+                max-width: 70%;
+                flex-wrap: wrap;
+                grid-template-columns: 1fr 1fr ;
+            }
+            @media(max-width: $mq-3){
+                flex-wrap: wrap;
+                max-width: 100%;
+                grid-gap: 30px;
+            }
+            @media(max-width: $mq-4){
+                place-items: center;
+                grid-template-columns: 1fr ;
+            }
+            @media(max-width: $mq-5){
+                max-width: 100%;
+                width: 100%;
+                grid-gap: 30px;
+            }
+        }
+        &-card{
+            &__item{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                max-width: 320px;
+                min-height: 310px;
+                padding: 45px 30px;
+                background-color: $white;
+                box-shadow: $box-shadow-2;
+
+                @media(max-width: $mq-3){
+                    max-width: 100%;
+                }
+                @media(max-width: $mq-4){
+                    max-width: 550px;
+                    height: 200px;
+                }
+                @media(max-width: $mq-5){
+                    max-width: 100%;
+                    height: 200px;
+                }
+            }
+            &__video{ max-width: 100%; }
+            &__title{
+                @include f-title();
+                font-size: 26px;
+                text-align: center;
+                margin-bottom: 10px;
+
+                @media(max-width: $mq-5){ font-size: 24px; }
+            }
+            &__description{
+                @include f-description();
+                text-align: center;
+                font-size: 16px;
+            }
+        }
+}
